@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Hello Surya — a personal dashboard for time and timely civic updates." />
+    <title>Hello, Surya — Night Desk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="glow glow-one" aria-hidden="true"></div>
+    <div class="glow glow-two" aria-hidden="true"></div>
+
+    <header class="nav shell">
+      <a class="brand" href="#top" aria-label="Night Desk home"><span class="brand-mark">N</span> NIGHT DESK</a>
+      <nav aria-label="Primary navigation">
+        <a href="#clocks">Time</a>
+        <a href="#briefing">Briefing</a>
+      </nav>
+      <p class="status"><span></span> ONLINE / <span id="local-date">LOADING</span></p>
+    </header>
+
+    <main id="top" class="shell">
+      <section class="hero">
+        <p class="eyebrow reveal">YOUR PERSONAL NIGHT BRIEFING <span>01</span></p>
+        <h1 class="reveal">Hello,<br /><em>Surya.</em></h1>
+        <div class="hero-bottom reveal">
+          <p>Take a breath. The world is moving—<br />your desk has it in view.</p>
+          <a class="round-link" href="#briefing">VIEW THE BRIEF <span>↓</span></a>
+        </div>
+        <div class="orbit" aria-hidden="true"><i></i><b></b><small>24H</small></div>
+      </section>
+
+      <section class="clocks panel" id="clocks" aria-labelledby="clock-heading">
+        <div class="section-heading">
+          <p class="eyebrow">WORLD CLOCK <span>02</span></p>
+          <h2 id="clock-heading">Right now,<br />across the map.</h2>
+        </div>
+        <div class="clock-grid" id="clock-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="briefing" id="briefing" aria-labelledby="briefing-heading">
+        <div class="briefing-intro">
+          <p class="eyebrow">THE BRIEFING <span>03</span></p>
+          <h2 id="briefing-heading">What’s happening<br /><em>near & far.</em></h2>
+          <p class="briefing-copy">Quick paths to reliable public information, selected for your nightly scroll.</p>
+        </div>
+        <div class="stories">
+          <article class="story featured">
+            <div class="story-meta"><span class="pulse"></span> U.S. GOVERNMENT <time>LIVE SOURCE</time></div>
+            <p class="story-number">01</p>
+            <h3>Track official announcements, policy releases, and public updates.</h3>
+            <p class="story-summary">The White House newsroom posts official statements, executive actions, briefings, and administration updates as they are released.</p>
+            <a href="https://www.whitehouse.gov/news/" target="_blank" rel="noreferrer">OPEN WHITE HOUSE NEWS <span>↗</span></a>
+          </article>
+          <article class="story">
+            <div class="story-meta">CHARLOTTE, NC <time>LOCAL SOURCE</time></div>
+            <p class="story-number">02</p>
+            <h3>City projects, services, meetings, and notices in Charlotte.</h3>
+            <p class="story-summary">Visit the City of Charlotte newsroom for official municipal announcements and resident updates.</p>
+            <a href="https://www.charlottenc.gov/Newsroom" target="_blank" rel="noreferrer">OPEN CITY NEWSROOM <span>↗</span></a>
+          </article>
+          <article class="story compact">
+            <div class="story-meta">CIVIC WATCH <time>RESOURCES</time></div>
+            <h3>Follow federal agencies directly.</h3>
+            <a href="https://www.usa.gov/news" target="_blank" rel="noreferrer">USA.GOV NEWS <span>↗</span></a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="shell"><span>MADE FOR THE AFTER HOURS</span><span id="utc-time">UTC — --:--:--</span><span>HELLO, SURYA</span></footer>
+    <script src="script.js"></script>
+  </body>
+</html>
